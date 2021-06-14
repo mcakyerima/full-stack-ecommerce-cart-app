@@ -1,3 +1,124 @@
-* {
+
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
+}
+
+body, #root{
+  height: 100vh;
+  margin: 0;
+ 
+}
+body, footer, input, select, textarea{
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif Helvetica, sans-serif;
+}
+a:hover{
+  color: #ff8000
+}
+.parent-container{
+  height: 100vh;
+  background-image:url("images/pink-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.grid-container{
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns:1fr;
+  height:95%;
+  width: 90%;
+  box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
+-webkit-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
+-moz-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
+  border-radius: 2rem;
+
+}
+header{
+  grid-area: header;
+  /* background: rgb(226,226,229);
+  background: linear-gradient(90deg, rgba(226,226,229,0.5922177775522297) 100%, rgba(228,228,228,0.4040155303612184) 100%); */
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem ;
+  
+}
+
+header > .admin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  padding: 1rem;
+  width: 8rem;
+  position: relative;
+  background-color:#4d039c;
+  z-index: 3;
+  right: 2rem;
+  border-radius: 3rem;
+  color: white;
+  top: 1rem;
+  text-decoration: none;
+  top: 0;
+}
+header > .admin:hover{
+  color:#4d039c;
+  background-color: white;
+  transition: all;
+  transition-delay:  linear 3s ease-in-out ;
+  box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
+  -webkit-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
+  -moz-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
+}
+
+header > a {
+  text-decoration: none;
+  color: #4d039c;
+  font-weight: 600;
+  padding: 2rem;
+
+}
+main{
+  grid-area:main;
+  background-color: rgba(255, 255, 255, .10);  
+ backdrop-filter: blur(2px);
+ padding: 2rem;
+ font-size: 4rem;
+ font-weight: 700;
+ overflow-y: scroll;
+ 
+
+}
+footer{
+  grid-area:footer;
+  background-color: #4d039cbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem ;
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.main{
+  flex:3 60rem;
+
+}
+.sidebar{
+  flex: 1 20rem;
+ 
 }
