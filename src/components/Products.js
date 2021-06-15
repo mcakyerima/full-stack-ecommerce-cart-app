@@ -1,33 +1,32 @@
 import React, { Component } from 'react'
+import formatCurrency from './utilities'
+
 
 export default class Products extends Component {
+
     render() {
+
         return (
-            <div>
-                <ul className="products">
-                    {this.props.products.map((product) => (
-                        <li key={product.id}>
-                            <div className="product">
-                                < a href={"#" + product.id}/>
-                                <img src={product.image} alt={product.title}/>
-                                <p>
-                                    {product.title}
-                                </p>
-                                <div className="product-price">
-                                    <div>
-                                    {product.price}
-                                    </div>
-                                    <button className="botton primary">
-                                        Add To Cart
-                                    </button>
-                                    
-                                </div>
+            <div className="section">
+                { this.props.products.map((product) => (
+
+                    <div key={product._id} className="container">
+                        <div className="card">
+                            <div className={`imageBox ${product.category === "dress" ? "shirts" : "shoes"}`}>
+                                <img src={product.image} />
+                                <h2>{product.title}</h2>
                             </div>
-                        </li>
-                    ))}
-                </ul>
-                
+                            <div className="content"></div>
+                        </div>
+                    </div>
+                ))};
+
             </div>
+
+
+
         )
+
+
     }
 }

@@ -1,28 +1,58 @@
 {
     "products": [
       {
+        "_id": "shoes6",
+        "image": "/images/shoes6.png",
+        "title": "Nike Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["X", "L", "XL"],
+        "price": 10.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes5",
+        "image": "/images/sheos5.png",
+        "title": "Addidas Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["XL", "XXL"],
+        "price": 49.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes4",
+        "image": "/images/shoes4.png",
+        "title": "Nike Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["X", "M", "L"],
+        "price": 14.9,
+        "category": "shoes"
+      },
+      {
         "_id": "dress1",
         "image": "/images/dress1.jpg",
-        "title": "Midi sundress with shirring detail",
+        "title": "T-Shirts",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "L", "XL", "XXL"],
-        "price": 29.9
+        "price": 29.9,
+        "category": "dress"
       },
       {
         "_id": "dress2",
         "image": "/images/dress2.jpg",
-        "title": "Midi sundress with ruched front",
+        "title": "Dab T-Shirts",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "M", "L"],
-        "price": 18.9
+        "price": 18.9,
+        "category": "dress"
       },
       {
         "_id": "dress3",
         "image": "/images/dress3.jpg",
-        "title": "Cool Python 3 T-Shirt for Python Developers",
+        "title": "Python 3 T-Shirts",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "M", "L"],
-        "price": 14.9
+        "price": 14.9,
+        "category": "dress"
       },
       {
         "_id": "dress4",
@@ -30,7 +60,8 @@
         "title": "pytho c++ T-shirt for Developers",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["XL"],
-        "price": 25.9
+        "price": 25.9,
+        "category": "dress"
       },
       {
         "_id": "dress5",
@@ -38,15 +69,89 @@
         "title": "Cool Node.Js programmers Wear",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "L", "XL"],
-        "price": 10.9
+        "price": 10.9,
+        "category": "dress"
       },
       {
         "_id": "dress6",
         "image": "/images/dress6.jpg",
-        "title": "Look astonishing in that Mongo.Db T-Shirt",
+        "title": "Mongo-Db T-Shirts",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["X", "L", "XL"],
+        "price": 10.9,
+        "category": "dress"
+      },
+      {
+        "_id": "shoes11",
+        "image": "/images/shoes11.png",
+        "title": "Alomond Shoes",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["XL", "XXL"],
-        "price": 49.9
+        "price": 49.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes10",
+        "image": "/images/shoes10.png",
+        "title": "Fresh Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes9",
+        "image": "/images/shoes9.png",
+        "title": "Disel Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["X", "M", "L"],
+        "price": 18.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes8",
+        "image": "/images/shoes8.png",
+        "title": "Nike Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["X", "M", "L"],
+        "price": 14.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes7",
+        "image": "/images/shoes7.png",
+        "title": "Popa Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["XL"],
+        "price": 25.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes3",
+        "image": "/images/shoes3.png",
+        "title": "Nike Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["XL"],
+        "price": 25.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes2",
+        "image": "/images/shoes2.png",
+        "title": "Nike Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["X", "L", "XL"],
+        "price": 10.9,
+        "category": "shoes"
+      },
+      {
+        "_id": "shoes1",
+        "image": "/images/shoes1.png",
+        "title": "Nike Shoes",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+        "availableSizes": ["XL", "XXL"],
+        "price": 49.9,
+        "category": "shoes"
       }
     ]
   }

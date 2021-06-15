@@ -1,17 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=🇲ontserrat&display=swap");
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  
 }
+
 
 body, #root{
   height: 100vh;
   margin: 0;
  
 }
-body, footer, input, select, textarea{
+body, footer, input, select,button,main,textarea{
   font-size: 1.6rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif Helvetica, sans-serif;
+  font-family: Montserrat;
 }
 a:hover{
   color: #ff8000
@@ -30,10 +33,10 @@ a:hover{
 .grid-container{
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 6rem 1fr 5rem;
   grid-template-columns:1fr;
-  height:95%;
-  width: 90%;
+  height:98%;
+  width: 98%;
   box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
 -webkit-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
 -moz-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
@@ -50,7 +53,17 @@ header{
   flex-direction: row;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem ;
+  padding: 2rem;
   
+  
+}
+header > h2 a{
+  text-decoration: none;
+  padding: 0.3rem;
+  font-size: 3rem;
+  border: dashed 0.2rem purple;
+  margin: 1rem 2rem ;
+  border-radius: 1rem;
 }
 
 header > .admin{
@@ -69,12 +82,13 @@ header > .admin{
   top: 1rem;
   text-decoration: none;
   top: 0;
+  transition: 0.3 ease-in-out;
 }
 header > .admin:hover{
   color:#4d039c;
   background-color: white;
   transition: all;
-  transition-delay:  linear 3s ease-in-out ;
+  transition:  0.3s ease-in-out ;
   box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
   -webkit-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
   -moz-box-shadow: -2px 4px 27px -5px rgba(0,0,0,0.61);
@@ -85,18 +99,23 @@ header > a {
   color: #4d039c;
   font-weight: 600;
   padding: 2rem;
+ 
 
 }
 main{
-  grid-area:main;
-  background-color: rgba(255, 255, 255, .10);  
+ grid-area:main;
+ background-color: rgba(255, 255, 255, .10);  
  backdrop-filter: blur(2px);
  padding: 2rem;
- font-size: 4rem;
  font-weight: 700;
  overflow-y: scroll;
- 
+ -ms-overflow-style: none;  /* Internet Explorer 10+ */
+ scrollbar-width: none; 
 
+}
+/* hiding scroll bar for chrome */
+.main::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 footer{
   grid-area:footer;
@@ -108,17 +127,184 @@ footer{
   padding: 1rem;
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem ;
+ 
 }
 
-.content {
+.contents {
   display: flex;
   flex-wrap: nowrap;
+  
 }
 .main{
-  flex:3 60rem;
+  flex:4 49rem;
 
 }
 .sidebar{
-  flex: 1 20rem;
+  flex: 1 10rem;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none; 
  
+}
+
+/* hiding scroll bar for chrome */
+.sidebar::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* products edit */
+/* .products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  padding:0;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.products li{
+  flex :0 1 29rem;
+  height: 48rem;
+  padding: 1rem;
+ 
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.product img {
+  max-width: 37rem;
+  max-height: 37rem;
+}
+.product-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price div,
+.product-price button {
+  text-align: center;
+  flex: 1;
+}
+.product-price div{
+  font-size: 2rem;
+}
+.button{
+  padding: 1rem;
+  border: 0.1rem solid #c0c0c0;
+  background-color: #f0f0f0;
+  border-radius: 1rem;
+}
+.button.primary{
+  background-color: #dcaa15;
+} */
+
+/* New Product expereiment */
+.section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(247, 247, 247, 0.742);  
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 10rem 2rem;
+  box-sizing: border-box;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none; 
+  
+}
+/* hiding scroll bar for chrome */
+.section::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* .section::before{
+  content: "";
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background:#ef3b36;
+  clip-path: circle(65% at 100%  -20%);
+
+}
+.section::after{
+  content: "";
+  z-index: 1;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background:#47aafa;
+  clip-path: circle(35% at 0%  100%);
+
+} */
+.container{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+
+}
+.container .card{
+  position: relative;
+  width: 30rem;
+  height:40rem;
+  margin:20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(15px);
+
+}
+.container .card .imageBox{
+  position: relative;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding:2rem;
+  transition: 0.5s ease-in-out;
+  transform: all;
+  
+  
+
+}
+/* dynamic product animations for shoes */
+.container .card:hover .shirts img{
+  cursor: pointer;
+  color: cyan;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* dynamic animation for shirts */
+
+.container .card:hover .shoes{
+  transform: translateY(-3rem);
+
+}
+
+.container .card .imageBox img{
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 0 20px;
+  transition: 0.4s ease-in-out;
+ 
+}
+.container .card:hover .shoes img{
+   transform: translate(-1rem, -2rem) rotate(25deg) scale(1.3);
 }

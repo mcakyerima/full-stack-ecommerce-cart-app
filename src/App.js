@@ -19,11 +19,11 @@ class App extends React.Component {
       <div className="parent-container">
         <div className="grid-container">
         <header>
-          <a href="/">Mc Fresh Store</a>
+          <h2><a href="/">Mc Fresh Store</a></h2>
           <a className="admin" href="/admin">Admin</a>
         </header>
         <main>
-          <div className="content">
+          <div className="contents">
             <div className="main">
               <Products products={this.state.products}/>
             </div>
