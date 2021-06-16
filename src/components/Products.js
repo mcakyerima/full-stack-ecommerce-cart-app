@@ -16,7 +16,27 @@ export default class Products extends Component {
                                 <img src={product.image} />
                                 <h2>{product.title}</h2>
                             </div>
-                            <div className="content"></div>
+                            <div className="content">
+                                    <div className="size">
+                                        <h3>
+                                            Size :
+                                        </h3>
+                                        {
+                                        product.availableSizes.map((size, index) => (
+                                            <span key={index}>{size}</span>
+                                        ))
+                                    }
+                                    </div>
+                                    <div className="color">
+                                        <h3>
+                                            Color :
+                                        </h3>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <a href="#">Buy Now</a>
+                                </div>
                         </div>
                     </div>
                 ))};

@@ -259,9 +259,10 @@ footer{
 .container .card{
   position: relative;
   width: 30rem;
-  height:40rem;
+  height:50rem;
   margin:20px 40px;
   display: flex;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.05);
@@ -291,20 +292,151 @@ footer{
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+.container .card:hover .shirts h2{
+  opacity: 0;
+}
+
 /* dynamic animation for shirts */
 
 .container .card:hover .shoes{
-  transform: translateY(-3rem);
+  transform: translateY(-5rem);
+  margin-bottom: 2rem;
+}
 
+.container .card .shoes h2{
+  transform: translateY(-1rem);
+  font-size: 3rem;
 }
 
 .container .card .imageBox img{
   max-width: 100%;
   max-height: 100%;
-  margin: 0 0 20px;
+  margin: 0 20px;
+  margin-top: -5rem;
   transition: 0.4s ease-in-out;
  
 }
 .container .card:hover .shoes img{
-   transform: translate(-1rem, -2rem) rotate(25deg) scale(1.3);
+   transform: translate(-1rem, -2rem) rotate(25deg) scale(1.1);
+} 
+/* .content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  height: 1rem;
+  width: 10rem;
+  z-index: 3;
+  
 }
+.size{
+  display: flex;
+
+}
+.size .size-content{
+  padding:0.5rem;
+}
+.size .size-content h2{
+  background-color: yellow;
+  height: 2rem;
+  padding: 0.5rem;
+  width: 4rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+} */
+
+/* card content */
+.container .card .content{
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+}
+.container .card:hover .content{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-4rem);
+}
+.container .card .content .size{
+  transform: translateY(2rem);
+}
+
+.container .card .content .size,
+.container .card .content .color{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.container .card .content .size h3,
+.container .card .content .color h3{
+  color:rgb(131, 12, 125);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase; 
+  margin-right: 10px;  
+}
+.container .card .content .size span{
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  color:  #111;
+  background: #f1b306;
+  border-radius: 4px;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+.container .card .content .size span:hover{
+  background: #9bdc28;
+}
+.container .card .content .color span{
+  width: 20px;
+  height: 20px;
+  background: rgb(32, 190, 53);
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 2px solid rgb(115, 32, 248);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.container .card .content .color span:nth-child(2){
+  background: cyan;
+}
+.container .card .content .color span:nth-child(3){
+  background: #9bdc28;
+}
+.container .card .content .color span:nth-child(4){
+  background: #e91e63;
+}
+.container .card .content a{
+  position: relative;
+  top: 1rem;
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: #f1b306;
+  border-radius: 4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+
+
+}
+
