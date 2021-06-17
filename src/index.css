@@ -414,6 +414,7 @@ footer{
   border: 2px solid rgb(115, 32, 248);
   box-sizing: border-box;
   cursor: pointer;
+  text-align: center;
 }
 .container .card .content .color span:nth-child(2){
   background: cyan;
