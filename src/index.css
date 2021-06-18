@@ -476,3 +476,23 @@ footer{
   backdrop-filter: blur(1rem);
   font-size: 2rem;
 }
+.filter .filter-result{
+  padding: 1.5rem;
+  width: 17rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: #4d039c;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(1rem);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.filter-result h3{
+  margin-left: 1.5rem;
+}

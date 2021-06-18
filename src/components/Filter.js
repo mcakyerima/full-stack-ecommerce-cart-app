@@ -5,18 +5,19 @@ export default class extends Component {
         return (
             <div className="filter">
                 <div className="filter-result">
-                    {this.props.count} Products
+                    {this.props.count}
+                    <h3>products</h3>
                 </div>
                 <div className="filter-sort">
                     Order {" "}
-                    <select>
+                    <select value={this.props.sort} onChange={this.props.sortProducts}>
                         <option value="Lowest">Lowest</option>
                         <option value="Highest">Highest</option>
                     </select>
                 </div>
                 <div className="filter-size">
                     Filter
-                    <select>
+                    <select value={this.props.size} onChange={this.props.filterProducts}>
                         <option value="">All</option>
                         <option value="XS">XS</option>
                         <option value="S">S</option>
