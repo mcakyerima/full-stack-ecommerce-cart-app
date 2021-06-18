@@ -15,6 +15,7 @@ export default class Products extends Component {
                             <div className={`imageBox ${product.category === "dress" ? "shirts" : "shoes"}`}>
                                 <img src={product.image} />
                                 <h2>{product.title}</h2>
+                                <h3> {formatCurrency(product.price)}</h3>
                             </div>
                             <div className="content">
                                     <div className="size">
