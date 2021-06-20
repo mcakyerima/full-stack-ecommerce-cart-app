@@ -268,8 +268,9 @@ footer{
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   backdrop-filter: blur(15px);
-
+  
 }
+
 .container .card .imageBox{
   position: relative;
   width:100%;
@@ -281,9 +282,8 @@ footer{
   padding:2rem;
   transition: 0.5s ease-in-out;
   transform: all;
-  
-  
 
+  
 }
 /* dynamic product animations for shoes */
 .container .card:hover .shirts img{
@@ -307,15 +307,22 @@ footer{
   transform: translateY(-1rem);
   font-size: 3rem;
 }
+
 .container .card .shoes h3
 {
   margin-top: -3rem;
   padding: 0;
 }
+
 .container .card .shirts h3{
   margin-top: -1rem;
 
 }
+
+.container .card  .shirts.imageBox{
+  overflow: hidden;
+}
+
 
 /* iamges styling */
 .container .card .imageBox img{

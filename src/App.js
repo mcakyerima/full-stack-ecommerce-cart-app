@@ -15,13 +15,24 @@ class App extends React.Component {
     };
   }
   //sortProduct function
-  sortProducts(event){
+  sortProducts = (event) => {
     console.log(event.target.value)
+    this.setState()
   }
 
   //filterProducts funtion than filter by size
-  filterProducts(e){
-    console.log(e.target.value)
+  filterProducts = (e) => {
+    //check if event is empty then render the entire products
+    if(e.target.value == ""){
+      this.setState({size:this.state.size , product: data.products})
+      //if not, filter the products based on the users selected options
+    }else{
+      this.setState({
+        size : e.target.value,
+        products : data.products.filter((product)=> (product.availableSizes.indexOf(e.target.value) >= 0))
+      });
+    }
+  
   }
 
   render(){
@@ -41,7 +52,7 @@ class App extends React.Component {
               sort={this.state.sort}
               filterProducts={this.filterProducts}
               sortProducts={this.sortProducts}
-              />
+              ></Filter>
 
               <Products products={this.state.products}/>
             </div>
