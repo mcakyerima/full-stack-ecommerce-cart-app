@@ -13,12 +13,29 @@ class App extends React.Component {
       sort: ""
 
     };
-  }
+  };
   //sortProduct function
-  sortProducts = (event) => {
-    console.log(event.target.value)
-    this.setState()
-  }
+  sortProducts = (e) => {
+    //set the sort state
+    const sort = e.target.value;
+    //seth the sorted state
+    this.setState((state) => ({
+      sort : sort,
+      products : this.state.products.slice().sort((a,b) =>
+        sort === "lowest" ? 
+        a.price > b.price
+        ? 1 
+        : -1
+         : sort === "highest" 
+         ? a.price < b.price
+         ? 1 
+         : -1 
+         : a._id < b._id
+         ? 1
+         : -1
+         )
+      }))
+    };
 
   //filterProducts funtion than filter by size
   filterProducts = (e) => {
