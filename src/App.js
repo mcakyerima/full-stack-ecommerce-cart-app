@@ -18,9 +18,10 @@ class App extends React.Component {
   sortProducts = (e) => {
     //set the sort state
     const sort = e.target.value;
-    //seth the sorted state
+    //set the sorted state
     this.setState((state) => ({
       sort : sort,
+      //use products.slice() to copy the products state and sort it
       products : this.state.products.slice().sort((a,b) =>
         sort === "lowest" ? 
         a.price > b.price
