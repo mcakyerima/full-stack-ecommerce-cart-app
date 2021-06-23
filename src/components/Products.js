@@ -36,7 +36,7 @@ export default class Products extends Component {
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <a href="#">Buy Now</a>
+                                    <a href="#" onClick={()=>this.props.addToCart(product)}>Add To Cart</a>
                                 </div>
                         </div>
                     </div>
