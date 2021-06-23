@@ -503,3 +503,13 @@ footer{
 .filter-result h3{
   margin-left: 1.5rem;
 }
+
+/* cart side */
+
+.cart{
+  display: flex;
+  padding: 2.3rem;
+  margin: 1rem;
+  border-bottom: solid 0.1rem #c0c0c0;
+
+}

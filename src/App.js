@@ -21,17 +21,22 @@ class App extends React.Component {
   // if not exist? it then adds the product to basket and set a bolean alreadyInCart to false
 
   addToCart = (product) => {
+    //create a copy of cartItems
     const cartItems = this.state.cartItems.slice()
+    //create a variable for keeping track of item
     let alreadyInCart = false
+    //loop through and check if item exist then increment count by one, else add the product to cart
     cartItems.forEach((item) => {
       if (item._id == product._id) {
         item.count++
         alreadyInCart = true
       }
     })
+    //if item not already in cart? push it and set count to 1
     if (!alreadyInCart) {
       cartItems.push({ ...product, count: 1 });
     }
+    //update the state of cartItems
     this.setState({cartItems})
   }
 

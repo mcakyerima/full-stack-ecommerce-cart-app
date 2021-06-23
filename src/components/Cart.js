@@ -7,7 +7,13 @@ export default class Cart extends Component {
             <div>
                 {cartItems.length === 0? <div className="cart-header cart"> Cart is Empty</div>:
                 <div className="cart-header cart"> You Have {cartItems.length} items in the cart {""}</div>}
-                
+            </div>
+            <div>
+                <div className="cart">
+                    <ul className="cart-items">
+                        
+                    </ul>
+                </div>
             </div>
         )
     }
