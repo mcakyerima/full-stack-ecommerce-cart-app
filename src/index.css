@@ -508,8 +508,42 @@ footer{
 
 .cart{
   display: flex;
+  flex-direction: co;
   padding: 2.3rem;
   margin: 1rem;
-  border-bottom: solid 0.1rem #c0c0c0;
 
+}
+.cart-header{
+  border-bottom: solid 0.1rem #c0c0c0;
+}
+.cart-items{
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+.cart-items img{
+  width: 5rem;
+}
+.cart-items li{
+  display: flex;
+}
+.cart-items li div{
+  padding: .5rem;
+}
+.cart-items li div:last-child{
+  flex: 1;
+}
+.right{
+  text-align: right;
+}
+.button{
+  display: inline-block;
+  height: 3rem;
+  background: #e80909;
+  border-radius: .5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
 }
