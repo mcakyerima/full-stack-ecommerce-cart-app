@@ -534,16 +534,26 @@ footer{
   flex: 1;
 }
 .right{
+  /* display: flex; */
   text-align: right;
+  display: -webkit-inline-flex;
+  width: auto;
 }
+.price{
+  width: 6rem;
+}
+
 .button{
-  display: inline-block;
-  height: 3rem;
-  background: #e80909;
-  border-radius: .5rem;
-  font-weight: 600;
+  height: 2.7rem;
+  border: solid red .2rem;
+  border-radius: 1.2rem;
+  background-color: transparent;
+  font-weight: 300;
   letter-spacing: 1px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+  color: rgb(241, 21, 21);
+  font-size: 1.2rem;
   text-transform: uppercase;
+  padding: 1rem;
+  line-height: 1.3rem;
+  margin-left: .4rem;
 }

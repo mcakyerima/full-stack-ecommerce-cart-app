@@ -23,7 +23,10 @@ export default class Cart extends Component {
                                     <div>
                                         <div>{item.title}</div>
                                         <div className="right">
-                                            { ` ${formatCurrency(item.price)} x ${item.price}`} {" "}
+                                            <div className="price">
+                                                { ` ${formatCurrency(item.price)} x ${item.count}`} {" "}
+                                            </div>
+                                            
                                             <button className="button" onClick={()=> this.props.removeFromCart(item)}>Remove</button>
                                         </div>
                                     </div>
