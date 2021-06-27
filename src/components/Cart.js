@@ -12,8 +12,8 @@ export default class Cart extends Component {
                 </div>
                 )}
                 
-                <div>
-                    <div className="cart">
+                <div className="main-cart">
+                    <div className="cart ">
                         <ul className="cart-items">
                             {cartItems.map(item => (
                                 <li key={item._id}>
@@ -26,13 +26,19 @@ export default class Cart extends Component {
                                             <div className="price">
                                                 { ` ${formatCurrency(item.price)} x ${item.count}`} {" "}
                                             </div>
-                                            
-                                            <button className="button" onClick={()=> this.props.removeFromCart(item)}>Remove</button>
+                                            <button className="del_button" onClick={()=> this.props.removeFromCart(item)}>Remove</button>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
+                         <div>
+                            {
+                            cartItems.price (
+                                cartItems ? (<button className="btn_proceed" onClick={()=> this.props.checkOut(item)}>Proceed</button>) 
+                                : (<div></div>)
+                            ))}
+                        </div>
                     </div>
                 </div>
 

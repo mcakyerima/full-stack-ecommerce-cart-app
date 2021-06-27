@@ -19,6 +19,14 @@ class App extends React.Component {
 
   //create add to cart function to add products to cart... this func checks if product exist then increments it
   // if not exist? it then adds the product to basket and set a bolean alreadyInCart to false
+  //remove item to cart
+  removeFromCart = (product) => {
+    //create an instance of cart item
+    const cartItems = this.state.cartItems.slice()
+    //filter through cartItems and return items._id that are not equal product._id which returns a new array without the selected items
+    this.setState({ cartItems:cartItems.filter(x => x._id !== product._id)})
+
+  }
 
   addToCart = (product) => {
     //create a copy of cartItems
@@ -101,7 +109,8 @@ class App extends React.Component {
                 <Products products={this.state.products} addToCart={this.addToCart} />
               </div>
               <div className="sidebar">
-                <Cart cartItems={this.state.cartItems} />
+                <Cart cartItems={this.state.cartItems} 
+                  removeFromCart={this.removeFromCart}/>
               </div>
             </div>
           </main>
