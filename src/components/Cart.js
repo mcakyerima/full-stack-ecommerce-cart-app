@@ -33,6 +33,14 @@ export default class Cart extends Component {
                             ))}
                         </ul>
                          <div>
+<<<<<<< HEAD
+=======
+                            {
+                            cartItems.price (
+                                cartItems ? (<button className="btn_proceed" onClick={()=> this.props.checkOut(item)}>Proceed</button>) 
+                                : (<div></div>)
+                            ))}
+>>>>>>> 9826eabd5cf282d0f2f7b12439e9e6718f20fa59
                         </div>
                     </div>
                 </div>
