@@ -508,11 +508,15 @@ footer{
 
 .cart{
   display: flex;
-  flex-direction: co;
+  flex-direction: column;
   padding: 2.3rem;
   margin: 1rem;
-
+ 
 }
+.main-cart{
+  position: relative;
+}
+
 .cart-header{
   border-bottom: solid 0.1rem #c0c0c0;
 }
@@ -520,12 +524,21 @@ footer{
   padding: 0;
   width: 100%;
   list-style-type: none;
+  
+ 
 }
 .cart-items img{
   width: 5rem;
 }
 .cart-items li{
   display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(15px);
+  margin:1rem .2rem;
+  width: 100%;
+  
 }
 .cart-items li div{
   padding: .5rem;
@@ -534,16 +547,30 @@ footer{
   flex: 1;
 }
 .right{
+  /* display: flex; */
   text-align: right;
+  display: -webkit-inline-flex;
+  width: auto;
 }
-.button{
+.price{
+  width: 6rem;
+}
+
+.del_button{
   display: inline-block;
-  height: 3rem;
-  background: #e80909;
-  border-radius: .5rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  text-transform: uppercase;
+  border: none;
+  height: auto;
+  border-radius: .3rem;
+  background-color: #db2121;
+  color: #ffffff;
+  padding: .8rem;
+  margin-left: .4rem;
+  transition: all ease-in-out 100ms;
+}
+.del_button:hover{
+  background-color: white;
+  cursor: pointer;
+  color: #db2121;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
 }
