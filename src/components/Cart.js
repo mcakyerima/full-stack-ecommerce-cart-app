@@ -33,11 +33,6 @@ export default class Cart extends Component {
                             ))}
                         </ul>
                          <div>
-                            {
-                            cartItems.price (
-                                cartItems ? (<button className="btn_proceed" onClick={()=> this.props.checkOut(item)}>Proceed</button>) 
-                                : (<div></div>)
-                            ))}
                         </div>
                     </div>
                 </div>
