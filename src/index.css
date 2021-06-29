@@ -412,7 +412,7 @@ footer{
   line-height: 24px;
   display: block;
   color:  #111;
-  background: #f1b306;
+  background: rgb(245, 185, 56);
   border-radius: 4px;
   margin: 0 0.5rem;
   font-weight: 500;
@@ -448,13 +448,18 @@ footer{
   top: 1rem;
   display: inline-block;
   padding: 1.2rem 3rem;
-  background: #f1b306;
+  background: rgb(245, 185, 56);
   border-radius: 4rem;
   font-weight: 600;
   letter-spacing: 1px;
   color: #111;
   text-decoration: none;
   text-transform: uppercase;
+}
+.container .card .content a:hover
+{
+  background-color: rgb(230, 171, 44);
+  border: solid 0.1rem rgba(0, 0, 0, 0.531);
 }
 
 /* filter page */
@@ -571,6 +576,41 @@ footer{
   background-color: white;
   cursor: pointer;
   color: #db2121;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+
+.total
+{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.total > div
+{
+  flex: 1;
+  align-items: center;
+  font-size: 1.7rem;
+}
+.go_button{
+ flex: 1;
+ margin: 0 .4rem;
+  height: auto;
+  border-radius: .3rem;
+  background-color: rgb(245, 185, 56);
+  color: black;
+  padding: .8rem;
+  margin-left: .4rem;
+  width: 100%;
+  border: 0.01rem solid rgba(0, 0, 0, 0.579);
+  transition: all ease-in-out 100ms;
+}
+.go_button:hover{
+  background-color: rgb(228, 161, 15);
+  cursor: pointer;
+  color: #181515;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 
 }
