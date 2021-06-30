@@ -10,7 +10,8 @@ class App extends React.Component {
     super();
     this.state = {
       products: data.products,
-      cartItems: [],
+      //if cartItem in localstorage, get it else set as empty array
+      cartItems: localStorage.getItem("cartItems")  ?  JSON.parse(localStorage.getItem("cartItems")) : [],
       size: "",
       sort: ""
 
@@ -24,14 +25,15 @@ class App extends React.Component {
     //create an instance of cart item
     const cartItems = this.state.cartItems.slice()
     //filter through cartItems and return items._id that are not equal product._id which returns a new array without the selected items
-    this.setState({ cartItems:cartItems.filter(x => x._id !== product._id)})
+    this.setState({ cartItems:cartItems.filter((x)=> x._id !== product._id)})
+    localStorage.setItem("cartItems", JSON.stringify(cartItems.filter((x) => x._id !== product._id)));
 
   }
 
   addToCart = (product) => {
     //create a copy of cartItems
     const cartItems = this.state.cartItems.slice()
-    //create a variable for keeping track of item
+    //create a variable for keeping track of item existance
     let alreadyInCart = false
     //loop through and check if item exist then increment count by one, else add the product to cart
     cartItems.forEach((item) => {
@@ -45,7 +47,9 @@ class App extends React.Component {
       cartItems.push({ ...product, count: 1 });
     }
     //update the state of cartItems
-    this.setState({cartItems})
+    this.setState({cartItems});
+    // make cartItems persistent after refresh by adding to local storage
+    localStorage.setItem('cartItems' , JSON.stringify(cartItems));
   }
 
   //sortProduct function
@@ -87,6 +91,10 @@ class App extends React.Component {
 
   }
 
+  createOrder = (order) => {
+    alert(`order recieved for ${order.name}`)
+  }
+
   render() {
 
     return (
@@ -110,7 +118,8 @@ class App extends React.Component {
               </div>
               <div className="sidebar">
                 <Cart cartItems={this.state.cartItems} 
-                  removeFromCart={this.removeFromCart}/>
+                  removeFromCart={this.removeFromCart}
+                  createOrder={this.createOrder}/>
               </div>
             </div>
           </main>
