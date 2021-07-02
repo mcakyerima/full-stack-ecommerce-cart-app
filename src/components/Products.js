@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import formatCurrency from './utilities'
+import Fade from "react-reveal/Fade";
 
 
 export default class Products extends Component {
@@ -8,6 +9,7 @@ export default class Products extends Component {
 
         return (
             <div className="section">
+                <Fade bottom cascade={true}>
                 { this.props.products.map((product) => (
 
                     <div key={product._id} className="container">
@@ -41,6 +43,8 @@ export default class Products extends Component {
                         </div>
                     </div>
                 ))};
+
+                </Fade>
 
             </div>
 
