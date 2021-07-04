@@ -47,6 +47,7 @@ header{
   grid-area: header;
   /* background: rgb(226,226,229);
   background: linear-gradient(90deg, rgba(226,226,229,0.5922177775522297) 100%, rgba(228,228,228,0.4040155303612184) 100%); */
+  /* styling the header */
   display:flex;
   justify-content: space-between;
   align-items: center;
