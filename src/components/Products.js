@@ -1,11 +1,29 @@
 import React, { Component } from 'react'
 import formatCurrency from './utilities'
 import Fade from "react-reveal/Fade";
+import Modal from "react-modal";
+import Zoom from "react-reveal/Zoom";
 
 
 export default class Products extends Component {
-
+    constructor (props){
+         super(props);
+         this.state= {
+             //set initial value of product to null if it does not exist
+             product : null,
+         };
+    };
+    openModal = (product) => {
+        this.setState({product})
+    };
+    closeModal = () => {
+        //onClick. set product state to null. this stops the product from renderign since it only renders when the product is not null
+        this.setState({product: null});
+    };
+    
     render() {
+        //use destructuring assignment to add product as product state
+        const {product} = this.state;
 
         return (
             <div className="section">
@@ -14,8 +32,8 @@ export default class Products extends Component {
 
                     <div key={product._id} className="container">
                         <div className="card">
-                            <div className={`imageBox ${product.category === "dress" ? "shirts" : "shoes"}`}>
-                                <img src={product.image} />
+                            <div  onClick={() => this.openModal(product)} className={`imageBox ${product.category === "dress" ? "shirts" : "shoes"}` }>
+                                <img src={product.image} alt={product.title}/>
                                 <h2>{product.title}</h2>
                                 <h3> {formatCurrency(product.price)}</h3>
                             </div>
@@ -45,6 +63,18 @@ export default class Products extends Component {
                 ))};
 
                 </Fade>
+                {
+                    product && (
+                        <Modal isOpen={true}
+                        onRequestClose={this.closeModal}>
+                            <Zoom>
+                                <button onClick={this.closeModal}>x</button>
+                                <div>Modal</div>
+                            </Zoom>
+                            
+                        </Modal>
+                    )
+                }
 
             </div>
 
