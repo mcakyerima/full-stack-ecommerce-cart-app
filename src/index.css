@@ -681,3 +681,52 @@ input[type="email"]:valid ~ label,
  input[type="text"]:valid ~ label {
   top: -45px;
 }
+/* product details */
+.poroduct-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-height: 94vh;
+}
+.poroduct-details img {
+  max-height: 100vh;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.poroduct-details-description {
+  flex: 1 1;
+  margin: 4rem;
+}
+.close-modal{
+  position: absolute;
+  color: red;
+  right: 1rem;
+  top: 2.4rem;
+  z-index: 4;
+  width: 2rem;
+}
+
+.cart-button{
+    flex: 0;
+     margin-left: 10rem;
+     height: auto;
+     border-radius: .3rem;
+     background-color: rgb(245, 185, 56);
+     color: black;
+     padding: .8rem;
+     width: 30%;
+     border: solid transparent;
+     border-width: 0 0 0px 0;
+     transition: all ease-in-out 100ms;
+}
+
+.cart-button:hover{
+     background-color: rgb(228, 161, 15);
+     cursor: pointer;
+     color: #181515;
+     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+     border: solid #754804;
+     border-width: 0 0 4px 0;
+   
+   }

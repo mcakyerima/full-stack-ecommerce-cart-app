@@ -68,8 +68,38 @@ export default class Products extends Component {
                         <Modal isOpen={true}
                         onRequestClose={this.closeModal}>
                             <Zoom>
-                                <button onClick={this.closeModal}>x</button>
-                                <div>Modal</div>
+                                <button onClick={this.closeModal} className="close-modal">x</button>
+                                <div className="poroduct-details">
+                                    <img src={product.image} alt={product.title}/>
+                                    <div className="poroduct-details-description">
+                                        <p>
+                                            <stong>{product.title}</stong>
+                                        </p>
+                                        <p>
+                                            {product.description}
+                                        </p>
+                                        <p>
+                                             AvailableSizes: {"   "}
+                                            {product.availableSizes.map(x => (
+                                                <span key={x}> 
+                                                    <button className="button">
+                                                    {x} {"   "}
+                                                    </button>
+                                                </span>
+                                            ))}
+                                        </p>
+                                        <div className="prodouct-modal">
+                                            <div>
+                                                {formatCurrency(product.price)}
+                                                <button 
+                                                onClick={ () => { this.props.addToCart(product); this.closeModal()}} 
+                                                className="cart-button">
+                                                    Add to Cart
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </Zoom>
                             
                         </Modal>
