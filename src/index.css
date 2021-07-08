@@ -602,13 +602,12 @@ footer{
 }
 .go_button{
  flex: 1;
-  margin: 0 .4rem;
+  margin: 0;
   height: auto;
   border-radius: .3rem;
   background-color: rgb(245, 185, 56);
   color: black;
   padding: .8rem;
-  margin-left: .4rem;
   width: 100%;
   border: solid transparent;
   border-width: 0 0 0px 0;
@@ -686,7 +685,8 @@ input[type="email"]:valid ~ label,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  max-height: 94vh;
+  max-height: 65vh;
+  font-size: 1.6rem;
 }
 .poroduct-details img {
   max-height: 100vh;
@@ -730,3 +730,9 @@ input[type="email"]:valid ~ label,
      border-width: 0 0 4px 0;
    
    }
+.sizes{
+  display: flex;
+}
+.sizes .btn-size{
+  margin: 0 .2rem;
+}

@@ -73,16 +73,16 @@ export default class Products extends Component {
                                     <img src={product.image} alt={product.title}/>
                                     <div className="poroduct-details-description">
                                         <p>
-                                            <stong>{product.title}</stong>
+                                            <strong>{product.title}</strong>
                                         </p>
                                         <p>
                                             {product.description}
                                         </p>
-                                        <p>
+                                        <p className="sizes">
                                              AvailableSizes: {"   "}
                                             {product.availableSizes.map(x => (
                                                 <span key={x}> 
-                                                    <button className="button">
+                                                    <button className="btn-size">
                                                     {x} {"   "}
                                                     </button>
                                                 </span>
