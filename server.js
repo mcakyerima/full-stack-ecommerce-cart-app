@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost/react-shopping-cart-db' , {
 app.get("/api/products" , (req, res) => {
     
 })
-//crea a pruoduct model schema
+//creat a pruoduct model schema
 const Product = mongoose.model.apply("products" , new mongoose.schema(
     {_id: { type: shortid.generate },
     title: String,
