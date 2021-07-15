@@ -1,1 +1,1 @@
-export const FETCH_PRODUCT
+export const FETCH_PRODUCT_REQUEST

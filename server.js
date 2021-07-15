@@ -41,7 +41,7 @@ app.post("/api/products", async (req, res) => {
     res.send(saveProduct)
 });
 
-// delete product
+// delete product by passing the id as parameter
 app.delete("/api/products/:id", async (req, res) => {
     const deletedProduct = await Product.findByIdAndDelete(req.params.id)
     res.send(deletedProduct)

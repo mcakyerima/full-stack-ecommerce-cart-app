@@ -3,6 +3,8 @@ import Filter from "./components/Filter";
 import Products from "./components/Products";
 import Cart from "./components/Cart"
 import data from "./data.json"
+import store from "./store";
+import { Provider } from "react-redux";
 class App extends React.Component {
 
   //create a cusntrocutor for our App Class component and set initial states
@@ -98,6 +100,7 @@ class App extends React.Component {
   render() {
 
     return (
+      <Provider store={store}>
       <div className="parent-container">
         <div className="grid-container">
           <header>
@@ -129,6 +132,7 @@ class App extends React.Component {
           </footer>
         </div>
       </div>
+      </Provider>
 
     );
   }
