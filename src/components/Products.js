@@ -3,9 +3,11 @@ import formatCurrency from './utilities'
 import Fade from "react-reveal/Fade";
 import Modal from "react-modal";
 import Zoom from "react-reveal/Zoom";
+import {fetchProducts} from '../actions/productActions';
+import {connect} from "react-redux"
 
 
-export default class Products extends Component {
+class Products extends Component {
     constructor (props){
          super(props);
          this.state= {
@@ -13,6 +15,10 @@ export default class Products extends Component {
              product : null,
          };
     };
+    //call products if component is mounted
+    componentDidMount() {
+        this.props.fetchProducts();
+    }
     openModal = (product) => {
         this.setState({product})
     };
@@ -28,39 +34,47 @@ export default class Products extends Component {
         return (
             <div className="section">
                 <Fade bottom cascade={true}>
-                { this.props.products.map((product) => (
+                    { 
+                     !this.props.products ? <div>Loading.....</div>
+                     :
+                     <> 
+                     { this.props.product.map((product) => (
 
-                    <div key={product._id} className="container">
-                        <div className="card">
-                            <div  onClick={() => this.openModal(product)} className={`imageBox ${product.category === "dress" ? "shirts" : "shoes"}` }>
-                                <img src={product.image} alt={product.title}/>
-                                <h2>{product.title}</h2>
-                                <h3> {formatCurrency(product.price)}</h3>
-                            </div>
-                            <div className="content">
-                                    <div className="size">
-                                        <h3>
-                                            Size :
-                                        </h3>
-                                        {
-                                        product.availableSizes.map((size, index) => (
-                                            <span key={index}>{size}</span>
-                                        ))
-                                    }
-                                    </div>
-                                    <div className="color">
-                                        <h3>
-                                            Color :
-                                        </h3>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <a href="#" onClick={()=>this.props.addToCart(product)}>Add To Cart</a>
+                        <div key={product._id} className="container">
+                            <div className="card">
+                                <div  onClick={() => this.openModal(product)} className={`imageBox ${product.category === "dress" ? "shirts" : "shoes"}` }>
+                                    <img src={product.image} alt={product.title}/>
+                                    <h2>{product.title}</h2>
+                                    <h3> {formatCurrency(product.price)}</h3>
                                 </div>
+                                <div className="content">
+                                        <div className="size">
+                                            <h3>
+                                                Size :
+                                            </h3>
+                                            {
+                                            product.availableSizes.map((size, index) => (
+                                                <span key={index}>{size}</span>
+                                            ))
+                                        }
+                                        </div>
+                                        <div className="color">
+                                            <h3>
+                                                Color :
+                                            </h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#" onClick={()=>this.props.addToCart(product)}>Add To Cart</a>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
-                ))};
+                    ))}; 
+                    </>
+                    
+                    }
+                
 
                 </Fade>
                 {
@@ -114,4 +128,8 @@ export default class Products extends Component {
 
 
     }
-}
+};
+//connect accept 2 parameters, the first one is a func that acept state and return an obj that define which part of redux
+// stete we are gonna use. the second param is the list of actions and the actions we are gonna use is fetchProducts the connect
+// function itself returns another function, and that function accept the name of the component we are going to connect as the param
+export default connect((state) => ({products: state.products.items}),{fetchProducts},)(Products)

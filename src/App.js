@@ -1,9 +1,9 @@
 import React from "react";
 import Filter from "./components/Filter";
 import Products from "./components/Products";
-import Cart from "./components/Cart"
-import data from "./data.json"
-import store from "./store";
+import Cart from "./components/Cart";
+import data from "./data.json";
+import store from './store';
 import { Provider } from "react-redux";
 class App extends React.Component {
 
@@ -39,7 +39,7 @@ class App extends React.Component {
     let alreadyInCart = false
     //loop through and check if item exist then increment count by one, else add the product to cart
     cartItems.forEach((item) => {
-      if (item._id == product._id) {
+      if (item._id === product._id) {
         item.count++
         alreadyInCart = true
       }
@@ -81,7 +81,7 @@ class App extends React.Component {
   //filterProducts funtion than filter by size
   filterProducts = (e) => {
     //check if event is empty then render the entire products
-    if (e.target.value == "") {
+    if (e.target.value === "") {
       this.setState({ size: this.state.size, product: data.products })
       //if not, filter the products based on the users selected options
     } else {
