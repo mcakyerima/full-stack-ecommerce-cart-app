@@ -37,8 +37,8 @@ class Products extends Component {
                     { 
                      !this.props.products ? <div>Loading.....</div>
                      :
-                     <> 
-                     { this.props.product.map((product) => (
+                     <div className="section"> 
+                     { this.props.products.map((product) => (
 
                         <div key={product._id} className="container">
                             <div className="card">
@@ -71,7 +71,7 @@ class Products extends Component {
                             </div>
                         </div>
                     ))}; 
-                    </>
+                    </div>
                     
                     }
                 
